@@ -14,6 +14,7 @@ $jsIndex = 'index.js';
 $jsGsap = 'lib/gsap.js';
 $jsScrlTrig = 'lib/scroll_trigger.js';
 $jsScrlSmth = 'lib/scroll_smooth.js';
+
 ?>
 
 <!DOCTYPE html>

@@ -9,6 +9,7 @@ $cssHeader = 'header_main.css';
 $cssHeaderSecondary = 'header_secondary.css';
 $cssStyle = 'style.css';
 $cssArticleContainer = 'articles_container.css';
+
 ?>
 
 <!DOCTYPE html>
@@ -20,32 +21,32 @@ $cssArticleContainer = 'articles_container.css';
 
     <meta name="robots" content="noindex, nofollow">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssStyle"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssHeader"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssHeaderSecondary"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssArticleContainer"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssStyle"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssHeader"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssHeaderSecondary"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssArticleContainer"); ?>">
     <title>Cosmetolog</title>
 </head>
 <body>
-<?php include ('./templates/header/header.html'); ?>
+<?php include('./templates/header/header.html'); ?>
 
-    <main class="main_wrapper">
-        <h2 class="h2_articles">Статьи</h2>
-        <div class="article_wrapper">
-            <?php
-                $article_data = file_get_contents("./content/articles/tesed_article.json");
-                $article = json_decode($article_data, 1);
-                echo ("<h3>{$article["title"]}</h3>");
-                echo ("<img src='{$article["img"]}' alt='{$article["title"]}' width='700px' height='550px'>");
-                echo ("<p>{$article["description"]}</p>");
+<main class="main_wrapper">
+    <h2 class="h2_articles">Статьи</h2>
+    <div class="article_wrapper">
+        <?php
+        $article_data = file_get_contents("./content/articles/tesed_article.json");
+        $article = json_decode($article_data, 1);
+        echo("<h3>{$article["title"]}</h3>");
+        echo("<img src='{$article["img"]}' alt='{$article["title"]}' width='700px' height='550px'>");
+        echo("<p>{$article["description"]}</p>");
 
-                $article_data = file_get_contents("./content/articles/test.json");
-                $article = json_decode($article_data, 1);
-                echo ("<h3>{$article["title"]}</h3>");
-                echo ("<img src='{$article["img"]}' alt='{$article["title"]}' width='700px' height='550px'>");
-                echo ("<p>{$article["description"]}</p>")
-            ?>
-        </div>
-    </main>
+        $article_data = file_get_contents("./content/articles/test.json");
+        $article = json_decode($article_data, 1);
+        echo("<h3>{$article["title"]}</h3>");
+        echo("<img src='{$article["img"]}' alt='{$article["title"]}' width='700px' height='550px'>");
+        echo("<p>{$article["description"]}</p>")
+        ?>
+    </div>
+</main>
 </body>
 </html>

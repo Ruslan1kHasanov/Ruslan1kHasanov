@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     return;
 }
 
-reset ($_FILES);
+reset($_FILES);
 $temp = current($_FILES);
 
 
-if (is_uploaded_file($temp['tmp_name'])){
+if (is_uploaded_file($temp['tmp_name'])) {
     /*
       If your script needs to receive cookies, set images_upload_credentials : true in
       the configuration and enable the following two headers.
@@ -56,7 +56,7 @@ if (is_uploaded_file($temp['tmp_name'])){
 
     file_put_contents("debug.txt", $filetowrite);
 
-    if(move_uploaded_file($temp['tmp_name'], $filetowrite)){
+    if (move_uploaded_file($temp['tmp_name'], $filetowrite)) {
         // Determine the base URL
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? "https://" : "http://";
         $baseurl = $protocol . $_SERVER["HTTP_HOST"] . rtrim(dirname($_SERVER['REQUEST_URI']), "/") . "/";
@@ -65,7 +65,7 @@ if (is_uploaded_file($temp['tmp_name'])){
         // Use a location key to specify the path to the saved image resource.
         // { location : '/your/uploaded/image/file'}
         echo json_encode(array('location' => $baseurl . $filetowrite));
-    }else{
+    } else {
         header("HTTP/1.1 400 Upload failed.");
         return;
     }

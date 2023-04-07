@@ -10,7 +10,7 @@ if(title_input){
             ' | alignleft aligncenter alignright | forecolor backcolory',
         automatic_uploads: true,
         images_upload_url: 'image_uploader.php',
-        images_upload_handler: image_upload_handler_callback,
+        images_upload_handler: image_upload_handler_callback
     });
 
 

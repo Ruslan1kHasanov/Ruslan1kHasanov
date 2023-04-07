@@ -42,6 +42,7 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && $_POST["login"] == $a
     require("./templates/admin/admin_new_article.html");
 } else {
     require("./templates/admin/admin_auth.html");
+
 }
 ?>
 </body>

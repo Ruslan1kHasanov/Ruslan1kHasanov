@@ -19,11 +19,11 @@ $cssStyle = 'style.css';
 
     <meta name="robots" content="noindex, nofollow">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssStyle"); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo ($CSS_PATH . "$cssHeader"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssStyle"); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo($CSS_PATH . "$cssHeader"); ?>">
     <title>Cosmetolog</title>
 </head>
 <body>
-<?php include ('./templates/header/header.html'); ?>
+<?php include('./templates/header/header.html'); ?>
 </body>
 </html>
